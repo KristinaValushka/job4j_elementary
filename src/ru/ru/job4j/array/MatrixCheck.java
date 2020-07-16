@@ -13,6 +13,17 @@ public class MatrixCheck {
         return result;
     }
 
+    public static boolean monoVertical(char[][] board, int column) {
+        boolean result = true;
+        for (int row = 0; row < board.length; row++) {
+            if (board[row][column] != 'X') {
+                result = false;
+                break;
+            }
+        }
+        return result;
+    }
+
         public static void main (String[]args) {
             char[][] input = {
                     {' ', ' ', ' '},
@@ -20,5 +31,6 @@ public class MatrixCheck {
                     {' ', ' ', ' '},
             };
             MatrixCheck.monoHorizontal(input, 1);
+            MatrixCheck.monoVertical(input, 2);
         }
     }
