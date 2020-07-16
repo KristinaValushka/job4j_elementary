@@ -1,7 +1,7 @@
 package ru.job4j.array;
 
 
-@SuppressWarnings("checkstyle:EmptyLineSeparator")
+
 public class SwitchArray {
     public static int[] swap(int[] array, int source, int dest) {
         int save = array[source];
