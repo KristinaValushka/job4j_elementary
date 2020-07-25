@@ -12,4 +12,10 @@ public class MaxTest {
         assertThat(result, is(2));
     }
 
+    @Test
+    public void whenFourNumber() {
+        int result = Max.max(1, 2, 5, 7);
+        assertThat(result, is(7));
+
+    }
 }
