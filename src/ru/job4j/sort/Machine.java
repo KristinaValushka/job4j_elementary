@@ -16,8 +16,7 @@ public class Machine {
                 rest = rest - coins[i];
                 restCoint++;
             }
-        }
-    }
+        }    }
 
     public static void main(String[] args) {
         Machine machine = new Machine();
