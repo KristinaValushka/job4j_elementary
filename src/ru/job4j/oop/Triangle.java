@@ -16,7 +16,7 @@ public class Triangle {
     }
 
     public double period(double a, double b, double c) {
-       return a + b + c;
+       return (a + b + c) / 2;
     }
 
 
