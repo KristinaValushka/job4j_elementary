@@ -21,4 +21,6 @@ public class MachineTest {
         int[] rsl = machine.change(50, 35);
         assertThat(rsl, is(expected));
     }
+
+
 }
