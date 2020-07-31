@@ -7,18 +7,18 @@ public class Machine {
     public int[] change(int money, int price) {
         int[] rsl = new int[100];
         int size = 0;
-        return Arrays.copyOf(rsl, size);
-
+        int rest = money - price;
         for (int i = 0; i < coins.length; i++) {
-            int restCoint = 0;
-            int rest = money - price;
-            while (rest > 0){
+            while (rest > 0) {
                 rest = rest - coins[i];
-                restCoint++;
+                size++;
+                rsl[i] = coins[i];
             }
-            return restCoint;
         }
+        return Arrays.copyOf(rsl, size);
     }
+
+
 
     public static void main(String[] args) {
         Machine machine = new Machine();
