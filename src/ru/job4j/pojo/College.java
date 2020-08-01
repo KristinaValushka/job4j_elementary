@@ -7,7 +7,7 @@ public class College {
         student.setGroupNumber(3);
         student.setAdmissionDate(2013);
 
-        System.out.println(student.getName() + " studied in a group number " +
+        System.out.println(student.getName() + " studied in a group number. " +
                 student.getGroupNumber() + " in " +
                 student.getAdmissionDate());
     }
