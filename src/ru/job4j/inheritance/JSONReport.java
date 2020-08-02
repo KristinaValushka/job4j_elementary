@@ -1,24 +1,11 @@
 package ru.job4j.inheritance;
 
-    class TextReport {
-        public String generate(String name, String body) {
-            return name + System.lineSeparator() + body;
-        }
+import ru.job4j.inheritance.ru.job4j.inheritance.TextReport;
 
-
-
-        public static class JSONReport extends TextReport {
+      public class JSONReport extends TextReport {
             @Override
             public String generate(String name, String body) {
-                return name + " " + ":" + " " + "name" + System.lineSeparator() + body + " " + ":" + " "  + "body";
-            }
-        }
-
-            public static class ReportUsage {
-                public static void main(String[] args) {
-                    JSONReport report = new JSONReport();
-                    String text = report.generate("name", "body");
-                    System.out.println(text);
-                }
+                return "{ " + System.lineSeparator() + " " + name + "  " + ":" + " " + "\"name\"" + "," + System.lineSeparator() +
+                        " " + body + " " + ":" + "  "  + "\"body\"" + System.lineSeparator() + "}";
             }
         }
