@@ -1,5 +1,6 @@
 package ru.job4j.sort;
 
+@SuppressWarnings("checkstyle:WhitespaceAround")
 public class Profession {
     private String name;
 
@@ -9,12 +10,19 @@ public class Profession {
 
     private String birthday;
 
+    public String getName() {
+        return name;
+    }
 
-    public String getName() { }
+    public String getSurname() {
+        return surname;
+    }
 
-    public String getSurname() {}
+    public String getEducation() {
+        return education;
+    }
 
-    public String getEducation() {}
-
-    public String getBirthday() {}
+    public String getBirthday() {
+        return birthday;
+    }
 }
