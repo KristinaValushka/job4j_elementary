@@ -10,7 +10,7 @@ public class Profession {
     private String birthday;
 
 
-    public String getName() {}
+    public String getName() { }
 
     public String getSurname() {}
 
