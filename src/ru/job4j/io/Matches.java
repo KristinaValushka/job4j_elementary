@@ -20,10 +20,9 @@ public class Matches {
 
                 System.out.println("Осталось " + matches + " спичек");
             }
-            if (matches <= 0) {
-                System.out.println("Игрок " + (playerNumber ? 2 : 1) + " победил");
-                break;
-            }
+        }
+        if (matches <= 0) {
+            System.out.println("Игрок " + (playerNumber ? 2 : 1) + " победил");
 
         }
     }
