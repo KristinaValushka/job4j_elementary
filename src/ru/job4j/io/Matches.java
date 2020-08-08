@@ -7,22 +7,19 @@ public class Matches {
     public static void main(String[] args) {
         Scanner firstPlayer = new Scanner(System.in);
         int matches = 11;
-        int numberOfOnePlayer = Integer.valueOf(firstPlayer.nextLine());
-        
-        while (numberOfOnePlayer < 1 && numberOfOnePlayer > 3) {
-             numberOfOnePlayer = Integer.valueOf(firstPlayer.nextLine());
+        boolean playerNumber = true;
+        while (playerNumber) {
+            System.out.println("Ходит " + (playerNumber ? "первый" : "второй")
+                    + " игрок");
+            int numberOfOnePlayer = Integer.valueOf(firstPlayer.nextLine());
 
-            if (numberOfOnePlayer == 1) {
-                matches = matches - numberOfOnePlayer;
-                System.out.println("Осталось " + matches + " спичек");
-            } else if (numberOfOnePlayer == 2) {
-                matches = matches - numberOfOnePlayer;
-                System.out.println("Осталось " + matches + " спичек");
-            } else {
-                matches = matches - numberOfOnePlayer;
+            if (numberOfOnePlayer > 0 && numberOfOnePlayer < 4) {
+                playerNumber = true ? false : true;
+
+                matches -= numberOfOnePlayer;
+
                 System.out.println("Осталось " + matches + " спичек");
             }
         }
-
-        }
     }
+}
