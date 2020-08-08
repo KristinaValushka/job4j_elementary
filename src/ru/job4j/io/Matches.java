@@ -8,18 +8,23 @@ public class Matches {
         Scanner firstPlayer = new Scanner(System.in);
         int matches = 11;
         boolean playerNumber = true;
-        while (playerNumber) {
+        while (matches > 0) {
             System.out.println("Ходит " + (playerNumber ? "первый" : "второй")
                     + " игрок");
-            int numberOfOnePlayer = Integer.valueOf(firstPlayer.nextLine());
+            int numberOfPlayer = Integer.valueOf(firstPlayer.nextLine());
 
-            if (numberOfOnePlayer > 0 && numberOfOnePlayer < 4) {
-                playerNumber = true ? false : true;
+            if (numberOfPlayer > 0 && numberOfPlayer < 4) {
+                playerNumber = playerNumber ? false : true;
 
-                matches -= numberOfOnePlayer;
+                matches -= numberOfPlayer;
 
                 System.out.println("Осталось " + matches + " спичек");
             }
+            if (matches <= 0) {
+                System.out.println("Игрок " + (playerNumber ? 2 : 1) + " победил");
+                break;
+            }
+
         }
     }
 }
