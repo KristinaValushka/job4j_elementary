@@ -8,8 +8,7 @@ package ru.job4j.strategy;
             return    "  ____ " + ln
                     + " |    | " + ln
                     + " |____|" + ln;
-        }
-
+    }
         public static void main(String[] args) {
             System.out.println(new Triangle().draw());
 

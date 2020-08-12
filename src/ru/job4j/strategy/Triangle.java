@@ -10,7 +10,6 @@ package ru.job4j.strategy;
                     + " /   \\ " + ln
                     + "/_____\\" + ln;
         }
-
         public static void main(String[] args) {
             System.out.println(new Triangle().draw());
         }
