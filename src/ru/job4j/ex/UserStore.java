@@ -10,11 +10,10 @@ public class UserStore {
                 break;
             }
         }
-        return userName;
-
         if (userName == null) {
             throw new UserNotFoundException();
         }
+        return userName;
     }
 
     public static boolean validate(User user) throws UserInvalidException {
